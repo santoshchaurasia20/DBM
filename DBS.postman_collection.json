@@ -1,0 +1,258 @@
+{
+	"info": {
+		"_postman_id": "e6660c85-4a33-4047-ade0-73ba7e62fa0f",
+		"name": "DBS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29494637"
+	},
+	"item": [
+		{
+			"name": "Get Doctor List",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/getdr_list",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"getdr_list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Doctor Slot List",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "dr_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/getslot_list",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"getslot_list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Appointment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "dr_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "appointment_date",
+							"value": "2023-09-03",
+							"type": "text"
+						},
+						{
+							"key": "slot",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/save_appointment",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"save_appointment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Patient Appointment List",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "user_id",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/patient_list",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"patient_list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Patient Appointment Status",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "user_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "appointment_id",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/updatePatient_status",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"updatePatient_status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Doctor Appointment List",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "user_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/dr_list",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"dr_list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Doctor Appointment Status",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "user_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "appointment_id",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/updateDr_status",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"updateDr_status"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://127.0.0.1:8000",
+			"type": "string"
+		}
+	]
+}
